@@ -37,7 +37,7 @@ const Result = (props) => {
 
 
     return ( 
-        <div>classname='result'
+        <div className="result">
       {err ? `Nie znaleziono ${city}` : content}
         </div>
 
