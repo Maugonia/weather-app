@@ -24,6 +24,8 @@ class App extends Component {
 		wind: '',
 		humidity: '',
 		clouds: '',
+		weather_desc: '',
+		weather_iconID: '',
 		err: false,
 	};
 
@@ -38,6 +40,8 @@ class App extends Component {
 		console.log('potwierdzony formularz');
 		const API =
 			`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`;
+
+
 	
 			axios.get(API)
 				.then((response)=>{
@@ -63,7 +67,9 @@ class App extends Component {
 					pressure: data.main.pressure,
 					wind: data.wind.speed,
 					humidity: data.main.humidity,
-					clouds: data.clouds,
+					clouds: data.weather[0].main,
+					weather_desc: data.weather[0].description,
+					weather_iconID:data.weather[0].icon
 				}))
 
 			})
