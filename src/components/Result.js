@@ -24,6 +24,7 @@ const Result = (props) => {
         content = (
             <div>
                 <h3><em>Miasto: {city}</em></h3>
+                <h4>geolocalisation: {longitude, latitude}</h4>
                 <h4>Data: {date}</h4>
                 <h4>Aktualna temperatura: {temp}</h4>
                 <h4>Wschód słońca: {sunriseTime}</h4>

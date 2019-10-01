@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Result from './Result';
+import axios from "axios"
 import './App.css';
 
 // Klucz do API
@@ -38,39 +39,34 @@ class App extends Component {
 		const API =
 			`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`;
 	
-	fetch(API)
-		// .then(response => console.log(response))
-		// .catch(err => console.log(err))
-		.then(response => {
-			if(response.ok){
-				return response
-			}
-			throw Error("nie udało się")
-		})
-		.then(response => response.json())
-		// .then(data => console.log(data))
-		.then(data => {
+			axios.get(API)
+				.then((response)=>{
+					console.log(response.data)
+					return response.data
+			})
+			.then(data => {
 
-			const time = new Date().toLocaleString()
-			this.setState(state => ({
-				err: false,
+		
+				const time = new Date().toLocaleString()
+				this.setState(state => ({
+					err: false,
+	
+					date: time,
+					city: state.value,
+					longitude: data.coord.lon,
+					latitude: data.coord.lat,
+					sunrise: data.sys.sunrise,
+					sunset: data.sys.sunset,
+					temp: data.main.temp,
+					temp_min: data.main.temp_min,
+					temp_max: data.main.temp_max,
+					pressure: data.main.pressure,
+					wind: data.wind.speed,
+					humidity: data.main.humidity,
+					clouds: data.clouds,
+				}))
 
-				date: time,
-				city: state.value,
-				longitude: data.coord.lon,
-				latitude: data.coord.lat,
-				sunrise: data.sys.sunrise,
-				sunset: data.sys.sunset,
-				temp: data.main.temp,
-				temp_min: data.main.temp_min,
-				temp_max: data.main.temp_max,
-				pressure: data.main.pressure,
-				wind: data.wind.speed,
-				humidity: data.main.humidity,
-				clouds: data.clouds,
-			}))
-		})
-
+			})
 
 		.catch(err => {
 			console.log(err);
@@ -97,3 +93,37 @@ class App extends Component {
 }
 
 export default App;
+
+
+// fetch(API)
+	// 	// .then(response => console.log(response))
+	// 	// .catch(err => console.log(err))
+	// 	.then(response => {
+	// 		if(response.ok){
+	// 			return response
+	// 		}
+	// 		throw Error("nie udało się")
+	// 	})
+	// 	.then(response => response.json())
+	// 	// .then(data => console.log(data))
+		// .then(data => {
+
+		// 	const time = new Date().toLocaleString()
+		// 	this.setState(state => ({
+		// 		err: false,
+
+		// 		date: time,
+		// 		city: state.value,
+		// 		longitude: data.coord.lon,
+		// 		latitude: data.coord.lat,
+		// 		sunrise: data.sys.sunrise,
+		// 		sunset: data.sys.sunset,
+		// 		temp: data.main.temp,
+		// 		temp_min: data.main.temp_min,
+		// 		temp_max: data.main.temp_max,
+		// 		pressure: data.main.pressure,
+		// 		wind: data.wind.speed,
+		// 		humidity: data.main.humidity,
+		// 		clouds: data.clouds,
+		// 	}))
+	// 	})
