@@ -27,9 +27,9 @@ const Result = (props) => {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
         content = (
-            <div>
+            <div className="Resultat">
                 <h3>{city}</h3>
-                <h4>{longitude, latitude}</h4>
+                <h4><i class="fas fa-map-marker-alt"></i> {longitude, latitude}</h4>
                 <h4>Today is {date}</h4>
                 <img src={`http://openweathermap.org/img/wn/${weather_iconID}@2x.png`}/>
                 <h4><i class="fas fa-temperature-high"></i> Temperature: {Math.floor(temp)} &#176;C</h4>
@@ -55,7 +55,7 @@ const Result = (props) => {
 
     return ( 
         <div className="result">
-      {err ? `Sorry, we couldn't find ${city}. Please make sure the name of the city is spelled correctly` : content}
+      {err ? `Sorry, we couldn't find ${city}.` : content}
         </div>
 
         );

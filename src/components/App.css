@@ -1,5 +1,32 @@
 .App {
-    text-align: center;
+    /* text-align: center; */
     font-size: 18px;
-    
+
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 760px;
+    height: 100vh;
+
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+ background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/bk-lg.jpg") no-repeat center center;
+ background-size: cover;
+
+ font-family: 'Josefin Sans', sans-serif;
+ color: #fff;
+  }
+
+  .Container {
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: 20px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/app-bk.png") top center no-repeat #333c4d;
+
   }
