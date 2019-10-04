@@ -5,12 +5,14 @@ h5 {
     font-size: 12px;
 }
 .Resultat{
-
-
+margin: 0 auto;
+padding-left: 80px;
+padding-top: 20px;
+padding-bottom: 20px;
    background-color: rgba(54, 82, 110, 0.4); 
    box-shadow:0px 0px 4px #0D0000;
    width: 300px;
-    height: 500px;
+    height: 480px;
 }
 .result {
 font-size: 14px;
