@@ -1,6 +1,6 @@
 .App {
     /* text-align: center; */
-    font-size: 18px;
+    /* font-size: 12px; */
 
     margin: 0;
     padding: 0;
@@ -13,11 +13,11 @@
   align-items: center;
   justify-content: center;
 
- background: url("https://gitlab.codingplatform.pl/Maugo/weather/raw/51dff3d1b0a7446ad91385925bab02d83e6579ef/img/Graphic-Stock-vvv-0216-img_33663-456_web.jpg") no-repeat center center; 
+ background: url("https://gitlab.codingplatform.pl/Maugo/weather/raw/master/img/Graphic-Stock-vvv-0216-img_33663-456_web.jpg") no-repeat center center; 
  /* background: url("https://images.wallpaperscraft.com/image/mountains_sunset_sky_117732_3840x2400.jpg") no-repeat center center; */
  background-size: cover;
 
- font-family: 'Josefin Sans', sans-serif;
+ font-family: 'Lato', sans-serif;
  color: #fff;
   }
 
