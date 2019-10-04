@@ -1,5 +1,6 @@
 .myForm{
     margin:0 auto;
+    text-align: center;
   
   
     
@@ -7,9 +8,10 @@
 
 }
 
-.form-control-custom{
+.form-control{
 width: 45%;
+background-color: #EBEBEB 
+
 }
-. myForm {
-    text-align: center;
-}
+
+

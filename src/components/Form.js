@@ -7,7 +7,7 @@ const  Form = props => {
               <div class="input-group mb-3">
               {/* <div class="col-2"> */}
             <input 
-            type="text" className="form-control-custom"
+            type="text" className="form-control"
             value={props.value}
             onChange={props.change}
             placeholder="City"

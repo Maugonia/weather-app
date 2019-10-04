@@ -21,12 +21,10 @@
   }
 
   .Container {
-    width: 350px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
     position: absolute;
-    left: 50%;
-    margin-left: -200px;
-    margin-top: 20px;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/app-bk.png") top center no-repeat #333c4d;
-
+  
+    /* background-color: rgba(54, 82, 110, 0.4); 
+    box-shadow:0px 0px 4px #0D0000; */
   }

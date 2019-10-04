@@ -55,7 +55,7 @@ const Result = (props) => {
 
     return ( 
         <div className="result">
-      {err ? `Sorry, we couldn't find ${city}.` : content}
+      {err ? `Sorry, we couldn't find ${city}` : content}
         </div>
 
         );
