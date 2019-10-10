@@ -4,7 +4,7 @@ const  Form = props => {
     return (  
      <div clasName="myForm">
         <form onSubmit={props.submit}>
-              <div class="input-group mb-3">
+              <div className="input-group mb-3">
               {/* <div class="col-2"> */}
             <input 
             type="text" className="form-control"

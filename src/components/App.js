@@ -27,6 +27,7 @@ class App extends Component {
 		weather_desc: '',
 		weather_iconID: '',
 		err: false,
+		imBusy: false
 	};
 
 	handleInputChange = e => {
@@ -38,8 +39,11 @@ class App extends Component {
 	handleCitySubmit = e => {
 		e.preventDefault();
 		console.log('potwierdzony formularz');
+		this.setState({
+			imBusy: true,
+		});
 		const API =
-			`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`;
+			`https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`;
 
 
 	
@@ -54,6 +58,7 @@ class App extends Component {
 				const time = new Date().toLocaleString()
 				this.setState(state => ({
 					err: false,
+					imBusy: false,
 	
 					date: time,
 					city: state.value,
@@ -78,6 +83,7 @@ class App extends Component {
 			console.log(err);
 			this.setState(prevState => ({
 				err: true,
+				imBusy: false,
 				city: prevState.value
 			}))
 		
@@ -85,6 +91,12 @@ class App extends Component {
 	}
 
 	render() {
+		if ( this.state.imBusy){
+			return (
+		<div> loading...</div>
+			)
+		}
+		
 		return (
 			<div className="App">
 				<div className="Container">
