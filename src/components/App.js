@@ -93,8 +93,22 @@ class App extends Component {
 	render() {
 		if ( this.state.imBusy){
 			return (
-		<div> loading...</div>
-			)
+		
+		<div className = "loader-background">
+			<div className="loader-container">
+		
+		
+			  <div className="three col">
+				<div className="loader" id="loader-2">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+			  </div>
+		
+			</div>
+		</div>
+		)
 		}
 		
 		return (

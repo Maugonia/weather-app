@@ -2,7 +2,7 @@ import React from 'react';
 import "./Form.css"
 const  Form = props => {
     return (  
-     <div clasName="myForm">
+     <div className="myForm">
         <form onSubmit={props.submit}>
               <div className="input-group mb-3">
               {/* <div class="col-2"> */}
